@@ -3,7 +3,6 @@ password = str(input('register password: '))
 upassword = password
 attempts = 5
 
-
 while attempts >= 1:
    userpass = str(input('enter password: '))
    if userpass != upassword:
@@ -46,7 +45,6 @@ while attempts >= 1:
                '9. It does not end the loop but rather moves on to the next ______':'ITERATION',
                '10. It is generally used to indicate ______ or unimplemented functions and loops.':'NULL'}
 
-
        correct = 0
        incorrect = 0
        for x in sas1:
@@ -60,7 +58,6 @@ while attempts >= 1:
                print('incorrect!')
        print(' ')
        print(correct, "/", 10)
-
 
        print("\nSAS 13: 1-5, identification. 6-10, true or false.")
        sas3 = {'1. True becomes False and False becomes True.':'NOT Operator',
@@ -86,8 +83,6 @@ while attempts >= 1:
                print('incorrect!')
        print(' ')
        print(correct, "/", 10)
-
-
        print(' ')
        score = int(input('enter overall score: '))
        if score >= 15 and score <= 19:
@@ -102,23 +97,3 @@ while attempts >= 1:
    if attempts >= 5:
        print('No more attempts')
        exit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
