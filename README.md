@@ -4,7 +4,7 @@
 - 💞️ I’m looking someone who can guide me
 - 📫 Here are my socials so that you can reach me:
   >> Instagram: myrrhlyka
-  >> Facebook: Lyka Myrrh Colinares
+  >> Facebook: Myrrh Lyka
   >> Gmail: lykamyrrh@gmail.com
 
 <!---
