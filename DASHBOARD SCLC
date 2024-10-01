@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shechaniah Academic Management System - Dashboard</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LineAwesome:wght@500&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700&display=swap" />
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="left-section">
+                <img src="img/SHECHANIAH LOGO 1.png" alt="School Logo" class="logo" />
+                <div class="text-section">
+                    <span class="shechaniah-academic-management-system">Shechaniah Academic <br /> Management System</span>
+                    <span class="divider">|</span>
+                    <span class="dashboard" id="header-title"></span>
+                </div>
+            </div>
+            <div class="right-section">
+                <div class="user-info">
+                    <span class="joeme-ochia">Joeme Ochia</span>
+                    <span class="admin">Admin</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#" onclick="showSection('dashboard')">Dashboard</a></li>
+            <li><a href="#" onclick="showSection('finance')">Finance</a></li>
+            <li><a href="#" onclick="showSection('payment')">Payment</a></li>
+            <li><a href="#" onclick="showSection('classlist')">Class List</a></li>
+            <li><a href="#" onclick="showSection('stafflist')">Staff List</a></li>
+            <li><a href="#" onclick="showSection('register')">Registration</a></li>
+            <li><a href="#" onclick="showSection('logout')">Logout</a></li>
+        </ul>
+    </aside>
+
+    <div class="main-container">
+        <div class="main-content">
+
+            <div id="dashboard" class="section">
+                <h2>Class List</h2>
+                <div class="color-block">
+                    <table class="class-list-table">
+                        <thead>
+                            <tr>
+                                <th>Reference No.</th>
+                                <th>Student Name</th>
+                                <th>Gender</th>
+                                <th>Class Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>Male</td>
+                                <td>Elementary</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="classlist" class="section">
+                <h2>Class List</h2>
+                <div class="color-block">
+                    <button class="add-row-button" onclick="addStaffRow()">Add Row</button> <!-- Add Row Button -->
+                    <table class="class-list-table">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Class Level</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>Elementary</td>
+                                <td><button class="edit-button" onclick="editStudent(1)">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>High School</td>
+                                <td><button class="edit-button" onclick="editStudent(2)">Edit</button></td>
+                            </tr>
+                            <!-- Add more student rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div id="stafflist" class="section">
+                <h2>Staff List</h2>
+                <div class="color-block">
+                    <button class="add-row-button" onclick="addStaffRow()">Add Row</button> <!-- Add Row Button -->
+                    <table class="staff-list-table">
+                        <thead>
+                            <tr>
+                                <th>Staff ID</th>
+                                <th>Staff Name</th>
+                                <th>Year started</th>
+                                <th>Class Level</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>John Doe</td>
+                                <td>2022</td>
+                                <td>Elementary</td>
+                                <td><button class="edit-button" onclick="editStaff(1)">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Jane Smith</td>
+                                <td>2023</td>
+                                <td>Elementary</td>
+                                <td><button class="edit-button" onclick="editStaff(2)">Edit</button></td>
+                            </tr>
+                            <!-- Add more student rows as needed -->
+                        </tbody>
+                    </table>
+                </div>
+                <script>
+                    function addClassRow() {
+    const classListBody = document.getElementById('class-list-body');
+    const newRow = `
+        <tr>
+            <td></td>
+            <td><input type="text" placeholder="Student Name" /></td>
+            <td><input type="text" placeholder="Class Level" /></td>
+            <td><button class="edit-button" onclick="editStudent()">Edit</button></td>
+        </tr>
+    `;
+    classListBody.insertAdjacentHTML('beforeend', newRow);
+}
+
+function addStaffRow() {
+    const staffListBody = document.getElementById('staff-list-body');
+    const newRow = `
+        <tr>
+            <td></td>
+            <td><input type="text" placeholder="Staff Name" /></td>
+            <td><input type="text" placeholder="Year Started" /></td>
+            <td><input type="text" placeholder="Class Level" /></td>
+            <td><button class="edit-button" onclick="editStaff()">Edit</button></td>
+        </tr>
+    `;
+    staffListBody.insertAdjacentHTML('beforeend', newRow);
+}
+
+                </script>
+            </div>
+
+            <div id="registration" class="section">
+                <h2>Registration</h2>
+                <div class="registration-container">
+                    <input type="text" id="studentId" placeholder="Student ID" />
+                    <input type="text" id="studentName" placeholder="Student Name" />
+                    <input type="text" id="username" placeholder="Username" />
+                    <input type="password" id="password" placeholder="Password" />
+                    <button id="registerButton">Register</button>
+                    <button id="addAnotherButton">Register Another</button>
+                    
+                    <table class="registration-table">
+                        <thead>
+                            <tr>
+                                <th>Student ID</th>
+                                <th>Student Name</th>
+                                <th>Username</th>
+                            </tr>
+                        </thead>
+                        <tbody id="registrationBody">
+                            <!-- Registered users will be displayed here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        
+        </div>
+        </div>
+        
+        <script>
+        function addStaffRow() {
+            // Add staff row logic here
+        }
+        
+        function editStudent(studentId) {
+            // Edit student logic here
+        }
+        
+        function editStaff(staffId) {
+            // Edit staff logic here
+        }
+        
+        const registerButton = document.getElementById("registerButton");
+        registerButton.addEventListener("click", function () {
+            const studentId = document.getElementById("studentId").value;
+            const studentName = document.getElementById("studentName").value;
+            const username = document.getElementById("username").value;
+        
+            if (studentId && studentName && username) {
+                const registrationBody = document.getElementById("registrationBody");
+                const newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td>${studentId}</td>
+                    <td>${studentName}</td>
+                    <td>${username}</td>
+                `;
+                registrationBody.appendChild(newRow);
+        
+                document.getElementById("studentId").value = "";
+                document.getElementById("studentName").value = "";
+                document.getElementById("username").value = "";
+            } else {
+                alert("Please fill in all fields.");
+            }
+        });
+        
+            </script>
+        
+            <div id="payment" class="section">
+                <h2>Payment Management</h2>
+                <div class="container-fluid">
+                    <div class="col-lg-12">
+                        <div class="row mb-4 mt-4">
+                            <div class="col-md-12">
+                                <!-- Optional content or header -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <b>List of Payments</b>
+                                        <span class="float:right">
+                                            <a class="btn b-primary btn-block btn-sm col-sm-2 float-right" href="javascript:void(0)" id="new_payment">
+                                                <i class="fa fa-plus"></i> New
+                                            </a>
+                                        </span>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-condensed table-bordered table-hover">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">#</th>
+                                                    <th>Date</th>
+                                                    <th>ID No.</th>
+                                                    <th>EF No.</th>
+                                                    <th>Name</th>
+                                                    <th>Paid Amount</th>
+                                                    <th class="text-center">Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="text-center" colspan="7">No data.</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <style>
+                    td { vertical-align: middle !important; }
+                    td p { margin: unset }
+                    img { max-width: 100px; max-height: 150px; }
+                </style>
+                <script>
+                    $(document).ready(function(){
+                        $('table').dataTable();
+                    });
+
+                    $('#new_payment').click(function(){
+                        uni_modal("New Payment", "manage_payment.php", "mid-large");
+                    });
+
+                    $('.view_payment').click(function(){
+                        uni_modal("Payment Details", "view_payment.php?ef_id=" + $(this).attr('data-ef_id') + "&pid=" + $(this).attr('data-id'), "mid-large");
+                    });
+
+                    $('.edit_payment').click(function(){
+                        uni_modal("Manage Payment", "manage_payment.php?id=" + $(this).attr('data-id'), "mid-large");
+                    });
+
+                    $('.delete_payment').click(function(){
+                        _conf("Are you sure to delete this payment?", "delete_payment", [$(this).attr('data-id')]);
+                    });
+
+                    function delete_payment($id){
+                        start_load();
+                        $.ajax({
+                            url: 'ajax.php?action=delete_payment',
+                            method: 'POST',
+                            data: {id: $id},
+                            success: function(resp){
+                                if(resp == 1){
+                                    alert_toast("Data successfully deleted", 'success');
+                                    setTimeout(function(){ location.reload(); }, 1500);
+                                }
+                            }
+                        });
+                    }
+                </script>
+            </div>
+
+        </div>
+    </div>
+
+    
+    <script>
+        function editStudent(studentId) {
+            // You can redirect to an edit page or open a modal for editing
+            alert('Editing student with ID: ' + studentId);
+            // Example: window.location.href = 'edit_student.php?id=' + studentId;
+        }
+
+        function showSection(section) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(function(sec) {
+                sec.style.display = 'none';
+            });
+            const selectedSection = document.getElementById(section);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+            localStorage.setItem('lastSection', section);
+
+            const headerTitle = document.getElementById('header-title');
+            switch (section) {
+                case 'finance':
+                    headerTitle.textContent = 'Finance';
+                    break;
+                case 'dashboard':
+                    headerTitle.textContent = 'Dashboard';
+                    break;
+                case 'payment':
+                    headerTitle.textContent = 'Payment';
+                    break;
+                case 'classlist':
+                    headerTitle.textContent = 'Class List';
+                    break;
+                case 'stafflist':
+                    headerTitle.textContent = 'Staff List';
+                    break;
+                case 'register':
+                    headerTitle.textContent = 'Registration';
+                    break;
+                case 'logout':
+                    headerTitle.textContent = 'Logout';
+                    break;
+                default:
+                    headerTitle.textContent = '';
+                    break;
+            }
+        }
+
+        // On page load, check for the last active section from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const lastSection = localStorage.getItem('lastSection');
+            if (lastSection) {
+                showSection(lastSection);
+            } else {
+                showSection('dashboard');
+            }
+        });
+    </script>
+</body>
+</html>
