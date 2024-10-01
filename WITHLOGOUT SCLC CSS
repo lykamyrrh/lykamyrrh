@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Login Section Styles */
+
+  #login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#loginError {
+  font-size: 14px;
+  color: red;
+  margin-top: 10px;
+}
+  /* Header Container */
+  header {
+    height: 70px; /* Adjust the height of the header */
+    padding: 10px 20px; /* Add padding to the header */
+    background-color: #ffffff; /* Background color */
+    display: flex; /* Use flexbox for layout */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  }
+  .header-content {
+    display: flex;           /* Enable flexbox */
+    justify-content: space-between;  /* Space out left and right sections */
+    padding: 10px 20px;      /* Add some padding */
+  }
+  
+  /* Left Section: Logo, Dashboard, and System Name */
+  .left-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  
+  .text-section {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjusts spacing between Dashboard and System name */
+  }
+  
+  .dashboard {
+    color: #5b7f99;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .divider {
+    color: #06355b;
+    font-size: 18px;
+  }
+  
+  .shechaniah-academic-management-system {
+    color: #06355b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* Right Section: User Info */
+.right-section {
+  display: flex; /* Allows user info to be in a row */
+  flex-direction: column; /* Stack user info vertically */
+  align-items: flex-end; /* Align to the right */
+}
+
+.user-info {
+    background-color: #f4f4f4; /* Background color for the rectangle */
+    padding: 10px 15px; /* Padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block; /* Keep the box small and wrapped around the content */
+    margin-top: 10px; /* Adjust margin for positioning */
+  }
+  
+  .joeme-ochia, .admin {
+    display: block;
+    text-align: right; /* Center-align the text */
+    color: #06355b; /* Text color */
+    font-family: 'Josefin Sans', sans-serif; /* Font family */
+  }
+  
+  .joeme-ochia {
+    font-size: 14px;
+    font-weight: 700;
+  }
+  
+  .admin {
+    font-size: 12px;
+    color: #9f9f96; /* Lighter color for 'Admin' */
+    margin-top: 5px; /* Space between Joeme Ochia and Admin */
+  }
+  
+  header {
+    background-color: #e0e0e0;
+    padding: 10px 40px;
+    border-bottom: 2px solid #e0e0e0;
+  }
+  
+  .sidebar {
+    width: 200px; /* Set the width of the sidebar */
+    background-color: #5b7f99; /* Background color for sidebar */
+    padding: 20px; /* Padding inside the sidebar */
+    height: calc(100vh - 60px); /* Full height minus header height */
+  }
+  
+  .sidebar ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin: 20px 0; /* Space between list items */
+    position: relative; /* Allow positioning for divider */
+  }
+  
+  .sidebar li:not(:last-child)::after { /* Add divider for all but last item */
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px; /* Divider height */
+    background-color: #8bbcc5; /* Divider color */
+    position: relative;
+    bottom: 5; /* Position it at the bottom of the list item */
+    left: 0; /* Align it to the left */
+  }
+  
+  .sidebar a {
+    text-decoration: none; /* Remove underline from links */
+    color: #eff2f5; /* Link color */
+    font-family: 'Nunito Sans', sans-serif; /* Apply Nunito Sans font */
+    font-size: 18px; /* Change font size for links */
+    padding: 10px; /* Additional padding inside the links */
+    display: block; /* Make the link fill the entire clickable area */
+  }
+  
+  .sidebar a:hover {
+    color: #9e0d00; /* Color on hover */
+  }
+
+  .rectangle-right {
+    position: absolute;
+    right: 15px;
+    top: 150px; /* Adjust the top position as needed */
+    width: 180px; /* Adjust width as needed */
+    height: 400px; /* Adjust height as needed */
+    background-color: #417dd6; /* Change to any color you like */
+    border-radius: 5px; /* Rounded button corners */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Nunito', sans-serif; /* Apply Nunito font */
+    color: #333333; /* Change this to the desired text color */
+  }
+  .square-behind {
+    position: absolute;
+    top: 5px; /* 50px from the top */
+    left: 5px; /* 50px from the left */
+    right: 5px; /* 50px from the right */
+    bottom: 5px; /* 50px from the bottom */
+    background-color: #7ad0df; /* Light blue color for the square */
+    z-index: 0; /* Make sure it's behind the text */
+}
+
+.rectangle-right h2,
+.text-view {
+    position: relative;
+    z-index: 1; /* Bring text in front of the square */
+}
+.text-view {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #e0e0e0; /* Light background for the text view */
+  border-radius: 5px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #333;
+  text-align: center; /* Center the text */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  .main-content {
+    position: absolute;
+    top: 145px; /* Increased distance from header */
+    height: 800px;
+    left: 210px;
+    right: 210px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 5px 0;
+}
+  
+.class-list-title {
+    font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+    font-size: 30px; /* Set font size */
+    height: 30px; /* Set height (optional, but can help with spacing) */
+    color: #06355b; /* Adjust color as needed */
+    margin: 0; /* Remove default margin */
+  }
+  
+/* CLASS Table Styling */
+.class-list-table {
+width: 100%; /* Make the table fill the block */
+border-collapse: collapse; /* Collapse borders for cleaner lines */
+margin-top: 10px;
+}
+
+.class-list-table th, .class-list-table td {
+padding: 8px 12px; /* Add some padding */
+text-align: center; /* Align text to the left */
+border: 1px solid #ddd; /* Light border around cells */
+font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+font-size: 14px; /* Set font size */
+}
+
+.class-list-table th {
+background-color: #06355b; /* Darker color for header */
+color: white; /* White text for the header */
+}
+
+.color-block {
+    background-color: rgb(139, 174, 202); /* Color block background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* STAFF Table Styling */
+.staff-list-table {
+  width: 100%; /* Make the table fill the block */
+  border-collapse: collapse; /* Collapse borders for cleaner lines */
+  margin-top: 10px;
+  }
+  
+  .staff-list-table th, .staff-list-table td {
+  padding: 8px 12px; /* Add some padding */
+  text-align: center; /* Align text to the left */
+  border: 1px solid #ddd; /* Light border around cells */
+  font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+  font-size: 14px; /* Set font size */
+  }
+  
+  .staff-list-table th {
+  background-color: #06355b; /* Darker color for header */
+  color: white; /* White text for the header */
+  }
+  
+  
+.color-block {
+    background-color: rgb(139, 174, 202); /* Color block background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+/* Button Styling */
+.add-button {
+  float: right; /* Aligns the button to the right */
+  margin-bottom: 10px; /* Adds space between the button and the table */
+  background-color: #06355b; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* No border */
+  width: 50px; /* Set the width of the button */
+  height: 30px; /* Optional: Set a height for consistency */
+  font-family: 'Nunito Sans', sans-serif; /* Use the same font */
+  font-size: 14px; /* Same font size as edit buttons */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.edit-button {
+  background-color: #06355b; /* Dark background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Add padding */
+  margin: 5px; /* Add margin */
+  border-radius: 5px; /* Round the corners */
+  font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+  font-size: 14px; /* Set font size */
+  cursor: pointer; /* Change cursor to pointer */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.add-button:hover {
+  background-color: #04506a; /* Darker shade on hover */
+}
+
+.edit-button:hover {
+  background-color: #0a4a73; /* Lighter background on hover */
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+/* this is for the registration*/
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input {
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #4CAF50; /* Green */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker green */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+
+/* Finance Section Styles */
+#finance {
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    margin-left: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0); /* Subtle shadow */
+}
+
+.finance-buttons {
+    display: flex; /* Align buttons in a row */
+    gap: 20px; /* Space between buttons */
+    margin-top: 5px; /* Space above the buttons */
+    margin-bottom: 5px;
+}
+
+.finance-btn {
+    font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+    font-size: 20px; /* Set font size */
+    padding: 10px 20px; /* Button padding */
+    background-color: #91b1d3; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.finance-btn:hover {
+    background-color: #421010; /* Darker shade on hover */
+}
+
+.finance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.finance-table th, .finance-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.finance-table th {
+    background-color: #06355b;
+    color: white;
+}
+  
+/* Finance Overview Section */
+#class-list {
+    padding: 20px; /* Padding around the section */
+    background-color: #ffffff; /* White background for the section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px 0; /* Margin to separate from other sections */
+}
+
+/* Title Styling */
+#class-list h2 {
+    font-family: 'Nunito Sans', sans-serif; /* Font family */
+    font-size: 28px; /* Font size */
+    color: #06355b; /* Text color */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* Button Styling */
+.classlist-buttons {
+    margin-bottom: 20px; /* Space below buttons */
+
+}
+
+.classlist-btn:hover {
+    background-color: #4a8c99; /* Darker shade on hover */
+}
+
+/* Table Styling */
+.color-block {
+    background-color: rgb(139, 174, 202); /* Color block background */
+    padding: 20px; /* Padding inside the block */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.classlist-table {
+    width: 100%; /* Make the table fill the block */
+    border-collapse: collapse; /* Collapse borders for cleaner lines */
+    margin-top: 10px; /* Space above the table */
+}
+
+.classlist-table th, .classlist-table td {
+    padding: 8px 12px; /* Padding for table cells */
+    text-align: center; /* Center-align text */
+    border: 1px solid #ffffff; /* Light border around cells */
+    font-family: 'Nunito Sans', sans-serif; /* Use Nunito Sans font */
+    font-size: 14px; /* Font size for table text */
+}
+
+.classlist-table th {
+    background-color: #06355b; /* Darker color for header */
+    color: white; /* White text for the header */
+}
+/* Styling for the right block */
+.right-block {
+  width: 175px;
+  height: 700px;
+  background-color: white;
+  position: absolute;
+  top: 150px; /* Increased distance from header */
+  right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Styling for the squares inside the block */
+.square {
+  width: 140px;
+  height: 200px;
+  background-color: #98b9db; /* Blue color for the squares */
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 20px; /* Space between the two squares */
+}
+
+.first-square {
+  display: flex;
+  flex-direction: column; /* Stack the text and input vertically */
+  justify-content: center; /* Center the content vertically */
+  align-items: center; /* Center the content horizontally */
+}
+
+.square-title {
+  font-family: 'Nunito Sans', sans-serif; /* Apply Nunito Sans font */
+  font-size: 16px;
+  color: #06355b;
+  text-align: center;
+  margin-bottom: 10px; /* Add some space below the title */
+}
+
+.student-input {
+  width: 80px; /* Width of the input field */
+  height: 30px;
+  padding: 5px;
+  font-family: 'Nunito Sans', sans-serif; /* Apply Nunito Sans font to input */
+  font-size: 14px;
+  border: 1px solid #ccc; /* Border around the input */
+  border-radius: 5px; /* Rounded corners for input */
+  text-align: center; /* Center the text inside the input */
+}
+
+/*logout */
+/* Modal Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px; 
+  border: 1px solid #888; 
+  width: 80%; 
+  max-width: 400px; 
+  text-align: center;
+}
+.modal-buttons {
+  margin-top: 20px;
+}
+
+  body {
+    display: flex;
+    flex-direction: column; /* Align items in a column */
+    background-color: #06365B; /* Set the blue color for the rest of the space */
+    margin: 0;
+    padding: 0;
+  }
